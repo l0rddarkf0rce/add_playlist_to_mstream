@@ -1,4 +1,4 @@
-# mstream_add_playlist
+# add_playlist_to_mstream
 
 > **Add one or many `.m3u` playlists to an mStream server via its public REST API.**
 > The script is completely self‑contained, configurable through environment variables
@@ -8,7 +8,7 @@
 
 ## Table of Contents
 
-- [mstream\_add\_playlist](#mstream_add_playlist)
+- [add\_playlist\_to\_mstream](#add_playlist_to_mstream)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Prerequisites](#prerequisites)
@@ -118,22 +118,22 @@ The python-dotenv package will automatically load these values before any valida
 ### Add a single playlist
 
 ```bash
-python -m mstream_add_playlist -p /path/to/playlist.m3u
+python -m add_playlist_to_mstream -p /path/to/playlist.m3u
 ```
 
 ### Add every .m3u in a directory (non‑recursive)
 
 ```bash
-python -m mstream_add_playlist -p /path/to/playlists/```
+python -m add_playlist_to_mstream -p /path/to/playlists/```
 ```
 
 ### CLI help
 
 ```bash
-python -m mstream_add_playlist -h
+python -m add_playlist_to_mstream -h
 
 
-usage: python -m mstream_add_playlist [-h] -p PATH
+usage: python -m add_playlist_to_mstream [-h] -p PATH
 
 Add playlists (in m3u format) to an mStream server via its REST API.
 
@@ -157,7 +157,7 @@ The script writes to stdout using the built‑in logging module.
 You can redirect output to a file if you wish:
 
 ```bash
-python -m mstream_add_playlist -p ./myplaylists > import.log 2>&1
+python -m add_playlist_to_mstream -p ./myplaylists > import.log 2>&1
 ```
 
 ## Error handling & exit codes
@@ -171,4 +171,10 @@ When an individual playlist fails (e.g. malformed .m3u or HTTP 409), the script 
 
 ## License
 
-This project is released under the GNU General Public License v3.0 – feel free to copy, modify, and distribute it, provided you retain the license notice.
+Copyright (c) 2023 Jose J. Cintron - l0rddarkf0rce@yahoo.com
+    
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License v3 as published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
